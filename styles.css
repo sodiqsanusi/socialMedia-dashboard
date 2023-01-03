@@ -1,3 +1,88 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/** Custom Styling  */
+:root{
+  --bgColor: #1e202a;
+  --topBg: #1f212e;
+  --cardBg: #252a41;
+  --subText: #8b97c6;
+  --mainText: #ffffff;
+  --themeBtnCol1: #378fe6;
+  --themeBtnCol2: #3eda82;
+}
 *{
   font-family: 'Inter', sans-serif;
+  padding: 0;
+}button{
+  cursor: pointer;
+}
+#container{
+  padding: 1em;
+  background-color: var(--bgColor);
+  background-image: linear-gradient(to bottom, var(--topBg) 12%, var(--bgColor) 12%);
+}
+header{
+  padding: 1em 0;
+}
+header h1{
+  color: var(--mainText);
+  font-size: min(1.5rem, 15vw);
+  font-weight: 700;
+}header p{
+  color: var(--subText);
+  font-size: .9rem;
+  font-weight: 700;
+}.header--top{
+  line-height: 1.5;
+  padding-bottom: 1em;
+  border-bottom: solid 1px var(--subText);
+}.header--theme{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75em 0;
+}.header--theme button{
+  position: relative;
+  width: 50%;
+  max-width: 60px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: var(--themeBtnCol1);
+  background-image: linear-gradient(to right, var(--themeBtnCol1), var(--themeBtnCol2));
+}.header--theme button span{
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background-color: var(--topBg);
 }
