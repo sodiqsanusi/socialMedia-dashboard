@@ -42,3 +42,19 @@ p, h1, h2, h3, h4, h5, h6 {
   background-color: var(--bgColor);
   background-image: linear-gradient(to bottom, var(--topBg) 12%, var(--bgColor) 12%);
 }
+header{
+  padding: 1em 0;
+}
+header h1{
+  color: var(--mainText);
+  font-size: min(1.5rem, 15vw);
+  font-weight: 700;
+}header p{
+  color: var(--subText);
+  font-size: .9rem;
+  font-weight: 700;
+}.header--top{
+  line-height: 1.5;
+  padding-bottom: 1em;
+  border-bottom: solid 1px var(--subText);
+}
