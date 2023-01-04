@@ -44,10 +44,10 @@ p, h1, h2, h3, h4, h5, h6 {
 #container{
   padding: 1em;
   background-color: var(--bgColor);
-  background-image: linear-gradient(to bottom, var(--topBg) 20%, var(--bgColor) 20%);
+  background-image: linear-gradient(to bottom, var(--topBg) 15%, var(--bgColor) 15%);
 }
 header{
-  padding: 1em 0;
+  padding: 1em 0 2em;
 }
 header h1{
   color: var(--mainText);
@@ -100,7 +100,7 @@ header h1{
 .mainlist--card{
   background-color: var(--cardBg);
   border-radius: 5px;
-  padding: 1em 0;
+  padding: 1.5em 0;
   border-top: solid 5px; 
 }.fb{
   border-top-color: #378fe6;
@@ -116,4 +116,44 @@ header h1{
               linear-gradient(to right, #fdc468, #df4996) border-box;
 }.yt{
   border-top-color: #c4032a;
+}
+.mainlist--handles{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 3%;
+}.mainlist--handles p{
+  color: var(--subText);
+  font-weight: 700;
+  font-size: .8rem;
+}.mainlist--followers{
+  padding: 1em 0;
+  color: var(--mainText);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}.mainlist--followers p:first-of-type{
+  font-size:3rem;
+  line-height: 1.2;
+  font-weight: 700;
+}.mainlist--followers p:last-of-type{
+  font-weight:100;
+  font-size: .75rem;
+  letter-spacing: 6px;
+  text-align: center;
+  color: var(--subText);
+  text-transform: uppercase;
+}.mainlist--metrics{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: .4em;
+  color: #1db489;
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+
+.decrease{
+  color: #dc414c;
 }
