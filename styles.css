@@ -107,8 +107,13 @@ header h1{
 }.twitter{
   border-top-color: #1ca0f2;
 }.insta{
-  border-top-color: #fdc468;
-  border-image: linear-gradient(to right, #fdc468,#df4996);
+  border-top-color: transparent;
+  /*! This was what I'm used to using when creating border gradients. */
+  /* border-image: linear-gradient(to right, #fdc468,#df4996) 1; */
+  /*! But it doesn't work with border radiuses. So I searched for another method */
+  /** Second method that works with border-radius. It involves masking of backgrounds.  */
+  background: linear-gradient(var(--cardBg), var(--cardBg)) padding-box,
+              linear-gradient(to right, #fdc468, #df4996) border-box;
 }.yt{
   border-top-color: #c4032a;
 }
