@@ -44,7 +44,7 @@ p, h1, h2, h3, h4, h5, h6 {
 #container{
   padding: 1em;
   background-color: var(--bgColor);
-  background-image: linear-gradient(to bottom, var(--topBg) 12%, var(--bgColor) 12%);
+  background-image: linear-gradient(to bottom, var(--topBg) 20%, var(--bgColor) 20%);
 }
 header{
   padding: 1em 0;
@@ -85,4 +85,30 @@ header h1{
   border-radius: 50%;
   transform: translateY(-50%);
   background-color: var(--topBg);
+}
+/** End of header styling */
+
+.mainlist{
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1em;
+  align-items: stretch;
+  text-align: center;
+}
+.mainlist--card{
+  background-color: var(--cardBg);
+  border-radius: 5px;
+  padding: 1em 0;
+  border-top: solid 5px; 
+}.fb{
+  border-top-color: #378fe6;
+}.twitter{
+  border-top-color: #1ca0f2;
+}.insta{
+  border-top-color: #fdc468;
+  border-image: linear-gradient(to right, #fdc468,#df4996);
+}.yt{
+  border-top-color: #c4032a;
 }
