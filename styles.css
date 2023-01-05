@@ -92,7 +92,7 @@ header h1{
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(200px, 50%), 1fr));
   gap: 1em;
   text-align: center;
   place-items: center;
@@ -159,9 +159,23 @@ section{
   padding: 2em 0;
 }section h2{
   color: var(--mainText);
+  margin-bottom: .75em;
 }
 .sectionlist{
   list-style: none;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 70%), 1fr));
+}
+.sectionlist--card{
+  background-color: var(--cardBg);
+  width: 100%;
+  border-radius: 5px;
+  padding: 1.5em 1em;
+}.sectionlist--card div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 
