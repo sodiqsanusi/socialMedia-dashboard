@@ -94,14 +94,16 @@ header h1{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1em;
-  align-items: stretch;
   text-align: center;
+  place-items: center;
 }
 .mainlist--card{
   background-color: var(--cardBg);
   border-radius: 5px;
   padding: 1.5em 0;
   border-top: solid 5px; 
+  max-width: 310px;
+  width: 100%;
 }.fb{
   border-top-color: #378fe6;
 }.twitter{
@@ -151,6 +153,15 @@ header h1{
   color: #1db489;
   font-size: .75rem;
   font-weight: 700;
+}
+/** End of mainlist styling  */
+section{
+  padding: 2em 0;
+}section h2{
+  color: var(--mainText);
+}
+.sectionlist{
+  list-style: none;
 }
 
 
