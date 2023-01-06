@@ -104,6 +104,8 @@ header h1{
   border-top: solid 5px; 
   max-width: 310px;
   width: 100%;
+  cursor: pointer;
+  transition: filter .3s linear;
 }.fb{
   border-top-color: #378fe6;
 }.twitter{
@@ -172,6 +174,8 @@ section{
   width: 100%;
   border-radius: 5px;
   padding: 1.5em 1em;
+  cursor: pointer;
+  transition: filter .3s linear;
 }.sectionlist--card div{
   display: flex;
   align-items: center;
@@ -193,6 +197,10 @@ section{
   column-gap: .2em;
   font-weight: 700;
   transform: translateY(.3em);
+}
+
+.mainlist--card:hover, .sectionlist--card:hover{
+  filter: contrast(85%);
 }
 
 
