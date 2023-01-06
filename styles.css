@@ -40,11 +40,15 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }button{
   cursor: pointer;
+}body{
+  background-color: var(--bgColor);
+  background-image: linear-gradient(to bottom, var(--topBg) 0 45%, var(--bgColor) 45%);
+  background-repeat: no-repeat;
 }
 #container{
   padding: 1em;
-  background-color: var(--bgColor);
-  background-image: linear-gradient(to bottom, var(--topBg) 15%, var(--bgColor) 15%);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 header{
   padding: 1em 0 2em;
@@ -167,7 +171,7 @@ section{
   list-style: none;
   display: grid;
   gap: 1em;
-  grid-template-columns: repeat(auto-fill, minmax(min(250px, 70%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(230px, 70%), 1fr));
 }
 .sectionlist--card{
   background-color: var(--cardBg);
@@ -206,4 +210,23 @@ section{
 
 .decrease{
   color: #dc414c;
+}
+
+@media(min-width: 700px){
+  body{
+    background-image: linear-gradient(to bottom, var(--topBg) 0 30%, var(--bgColor) 30%)
+  }
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header--top{
+    border: none;
+    padding: 0%;
+  }
+  .header--theme{
+    width: 30%;
+    max-width: 150px;
+  }
 }
