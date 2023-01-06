@@ -176,6 +176,23 @@ section{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}.sectionlist--platform{
+  margin-bottom: .75em;
+}.sectionlist--platform p{
+  color: var(--subText);
+  font-weight: 700;
+  font-size: 1rem;
+}.sectionlist--metric > p{
+  color: var(--mainText);
+  font-size: 2rem;
+  font-weight: 700;
+}.sectionlist--metric > div{
+  color: #1db489;
+  display: flex;
+  align-items: center;
+  column-gap: .2em;
+  font-weight: 700;
+  transform: translateY(.3em);
 }
 
 
