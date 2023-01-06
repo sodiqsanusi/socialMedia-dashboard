@@ -227,6 +227,12 @@ section{
   }
   .header--theme{
     width: 30%;
-    max-width: 150px;
+    max-width: 135px;
+  }.header--theme button{
+    height: 25px;
+    max-width: 50px;
+  }.header--theme button span{
+    height: 18px;
+    width: 18px;
   }
 }
