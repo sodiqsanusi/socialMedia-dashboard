@@ -26,7 +26,7 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 /** Custom Styling  */
-:root{
+.dark{
   --bgColor: #1e202a;
   --topBg: #1f212e;
   --cardBg: #252a41;
@@ -35,16 +35,29 @@ p, h1, h2, h3, h4, h5, h6 {
   --themeBtnCol1: #378fe6;
   --themeBtnCol2: #3eda82;
 }
+.light{
+  --bgColor: #ffffff;
+  --topBg: #f5f7ff;
+  --cardBg: #f0f2fa;
+  --subText: #63687e;
+  --mainText: #1e202a;
+  --themeBtnCol1: #63687e;
+  --themeBtnCol2: #63687e;
+}
 *{
   font-family: 'Inter', sans-serif;
   padding: 0;
 }button{
   cursor: pointer;
+}body{
+  background-color: var(--bgColor);
+  background-image: linear-gradient(to bottom, var(--topBg) 0 45%, var(--bgColor) 45%);
+  background-repeat: no-repeat;
 }
 #container{
   padding: 1em;
-  background-color: var(--bgColor);
-  background-image: linear-gradient(to bottom, var(--topBg) 15%, var(--bgColor) 15%);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 header{
   padding: 1em 0 2em;
@@ -85,6 +98,8 @@ header h1{
   border-radius: 50%;
   transform: translateY(-50%);
   background-color: var(--topBg);
+}.light{
+  left: 10%;
 }
 /** End of header styling */
 
@@ -104,6 +119,8 @@ header h1{
   border-top: solid 5px; 
   max-width: 310px;
   width: 100%;
+  cursor: pointer;
+  transition: filter .3s linear;
 }.fb{
   border-top-color: #378fe6;
 }.twitter{
@@ -165,13 +182,15 @@ section{
   list-style: none;
   display: grid;
   gap: 1em;
-  grid-template-columns: repeat(auto-fill, minmax(min(250px, 70%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(230px, 70%), 1fr));
 }
 .sectionlist--card{
   background-color: var(--cardBg);
   width: 100%;
   border-radius: 5px;
   padding: 1.5em 1em;
+  cursor: pointer;
+  transition: filter .3s linear;
 }.sectionlist--card div{
   display: flex;
   align-items: center;
@@ -195,7 +214,36 @@ section{
   transform: translateY(.3em);
 }
 
+.mainlist--card:hover, .sectionlist--card:hover{
+  filter: contrast(85%);
+}
+
 
 .decrease{
   color: #dc414c;
+}
+
+@media(min-width: 700px){
+  body{
+    background-image: linear-gradient(to bottom, var(--topBg) 0 30%, var(--bgColor) 30%)
+  }
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header--top{
+    border: none;
+    padding: 0%;
+  }
+  .header--theme{
+    width: 30%;
+    max-width: 135px;
+  }.header--theme button{
+    height: 25px;
+    max-width: 50px;
+  }.header--theme button span{
+    height: 18px;
+    width: 18px;
+  }
 }
