@@ -26,7 +26,7 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 /** Custom Styling  */
-.dark{
+html[data-theme="dark"]{
   --bgColor: #1e202a;
   --topBg: #1f212e;
   --cardBg: #252a41;
@@ -34,8 +34,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --mainText: #ffffff;
   --themeBtnCol1: #378fe6;
   --themeBtnCol2: #3eda82;
-}
-.light{
+}html[data-theme="light"]{
   --bgColor: #ffffff;
   --topBg: #f5f7ff;
   --cardBg: #f0f2fa;
@@ -98,7 +97,7 @@ header h1{
   border-radius: 50%;
   transform: translateY(-50%);
   background-color: var(--topBg);
-}.light{
+}html[data-theme="light"] button span{
   left: 10%;
 }
 /** End of header styling */
