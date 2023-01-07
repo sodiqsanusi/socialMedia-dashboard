@@ -1,8 +1,19 @@
-const root = document.querySelector('body');
+const root = document.querySelector('html');
 const themeBtn = document.getElementById('change-theme')
-const themeBtnSelector = document.querySelector('#change-theme span')
 
-themeBtn.onclick = () => {
-  themeBtnSelector.classList.toggle('light')
-  root.classList.toggle('light')
+let theme = root.getAttribute('data-theme')
+let choose = {
+  dark: 'light',
+  light: 'dark'
 }
+let changeTheme = () => {
+  root.setAttribute('data-theme', choose[theme])
+  theme = choose[theme]
+}
+
+themeBtn.onclick = changeTheme
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    changeTheme()
+  }
+)
