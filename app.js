@@ -13,7 +13,11 @@ let changeTheme = () => {
 
 themeBtn.onclick = changeTheme
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    changeTheme()
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({matches}) => {
+    console.log(matches, theme)
+    if((matches && theme == 'light') || !matches && theme == 'dark'){
+      changeTheme()
+    }
+    console.log(matches, theme)
   }
 )
